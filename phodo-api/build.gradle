@@ -17,7 +17,7 @@ jib {
         environment = [TZ:"Asia/Seoul"]
     }
     to {
-        image = "registry.hub.docker.com/phodo/fairer-api-repo"
+        image = "registry.hub.docker.com/phodo/phodo-api-repo"
         tags = ['latest', new SimpleDateFormat('yyyyMMddHHmmss').format(System.currentTimeMillis())]
     }
     container {

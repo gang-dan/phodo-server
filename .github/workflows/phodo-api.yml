@@ -26,8 +26,8 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - name: Install Docker
-        uses: docker/setup-docker@v2
+#      - name: Install Docker
+#        uses: docker/setup-docker@v2
 
       - name: Build and push Docker image
         run: |
