@@ -1,0 +1,7 @@
+FROM adoptopenjdk/openjdk11:centos-jre
+
+COPY . /app
+
+WORKDIR /app
+
+RUN ./gradlew build
