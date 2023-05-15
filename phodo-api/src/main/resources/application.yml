@@ -1,0 +1,43 @@
+spring:
+  config:
+    activate:
+      on-profile: ["local", "real"]
+  servlet:
+    multipart:
+      max-file-size: 128MB
+      max-request-size: 128MB
+
+  datasource:
+    url: ${DATABASE_URL}
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: validate
+  mvc:
+    pathmatch:
+      # swagger
+      matching-strategy: ant_path_matcher
+
+server:
+  port: ${PORT:8080}
+  error:
+    whitelabel:
+      enabled: false
+
+springdoc:
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
+    display-query-params-without-oauth2: true
