@@ -57,8 +57,7 @@ jobs:
       - name: Generate deployment package
         run: |
           mkdir -p deploy/phodo-api
-          cp -r phodo-api/* deploy/phodo-api/
-
+          cp /home/runner/work/phodo-server/phodo-server/phodo-api/Dockerrun.aws.json deploy/Dockerrun.aws.json
           cd deploy && zip -r deploy.zip .
 
       - name: Deploy to EB
