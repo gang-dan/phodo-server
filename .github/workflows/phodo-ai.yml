@@ -48,7 +48,7 @@ jobs:
       - name: Generate deployment package
         run: |
           mkdir -p deploy/phodo-ai
-          cp -r django-project/* deploy/phodo-ai/
+          cp -r phodo-ai/* deploy/phodo-ai/
 
           cd deploy && zip -r deploy.zip .
 
