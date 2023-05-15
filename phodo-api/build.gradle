@@ -1,33 +1,12 @@
-import java.text.SimpleDateFormat
-
 plugins {
     id 'java'
     id 'org.springframework.boot' version '2.5.9'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 
-    // jib
-    // id 'com.google.cloud.tools.jib' version '3.2.1'
-
     //querydsl 추가
     id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
 
-//jib {
-//    from {
-//        image = "adoptopenjdk/openjdk11:centos-jre"
-//    }
-//    container {
-//        environment = [TZ:"Asia/Seoul"]
-//    }
-//    to {
-//        image = "registry.hub.docker.com/phodo/phodo-api-repo"
-//        tags = ['latest', new SimpleDateFormat('yyyyMMddHHmmss').format(System.currentTimeMillis())]
-//    }
-//    container {
-//        creationTime = "USE_CURRENT_TIMESTAMP"
-//        jvmFlags = ['-Dspring.profiles.active=dev', '-XX:+UseContainerSupport', '-Dfile.encoding=UTF-8', '-Duser.timezone="Asia/Seoul"']
-//    }
-//}
 
 group = 'app.gangdan'
 version = '0.0.1-SNAPSHOT'
@@ -62,11 +41,6 @@ dependencies {
     // aws secret manager
     implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.3'
     implementation 'org.springframework.cloud:spring-cloud-starter-aws-secrets-manager-config:2.2.6.RELEASE'
-
-    // jwt
-    implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
-    implementation 'io.jsonwebtoken:jjwt-impl:0.11.2'
-    implementation 'io.jsonwebtoken:jjwt-jackson:0.11.2'
 
     // https://mvnrepository.com/artifact/org.json/json
     implementation group: 'org.json', name: 'json', version: '20220320'
