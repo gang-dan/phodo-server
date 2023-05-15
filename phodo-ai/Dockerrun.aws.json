@@ -1,0 +1,14 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "phodo2023/phodo-ai",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 8000,
+      "Protocol": "tcp"
+    }
+  ],
+  "Logging": "/var/log/nginx"
+}
