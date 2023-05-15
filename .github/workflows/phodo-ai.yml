@@ -31,7 +31,7 @@ jobs:
       - name: Build and push Docker image
         run: |
           echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login --username "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
-          docker build -t phodo2023/phodo-ai -f /home/runner/work/phodo-server/phodo-server/phodo-be/phodo-api/Dockerfile.api .
+          docker build -t phodo2023/phodo-ai -f /home/runner/work/phodo-server/phodo-server/phodo-be/phodo-api/Dockerfile .
           docker push phodo2023/phodo-ai
 
       - name: Get current time

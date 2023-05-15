@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:centos-jre
+FROM openjdk:11-jdk
 
 COPY . /app
 
