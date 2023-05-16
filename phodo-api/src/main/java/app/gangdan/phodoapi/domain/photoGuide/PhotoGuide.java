@@ -1,6 +1,7 @@
-package app.gangdan.phodoapi.domain.photoguide;
+package app.gangdan.phodoapi.domain.photoGuide;
 
 import app.gangdan.phodoapi.domain.BaseEntity;
+import app.gangdan.phodoapi.domain.photoSpot.PhotoSpot;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,6 +19,8 @@ public class PhotoGuide extends BaseEntity {
 
     private String PhotoGuideName;
 
-    private Long photoSpotId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "photo_spot_id")
+    private PhotoSpot photoSpot;
 
 }

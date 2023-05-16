@@ -1,9 +1,10 @@
-package app.gangdan.phodoapi.domain.photospot;
+package app.gangdan.phodoapi.domain.photoSpot;
 
 import lombok.*;
 import software.amazon.ion.Decimal;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "photo_spot")
@@ -18,8 +19,8 @@ public class PhotoSpot {
 
     private String photoSpotName;
 
-    private Decimal longitude;
+    private BigDecimal longitude;
 
-    private Decimal latitude;
+    private BigDecimal latitude;
 
 }

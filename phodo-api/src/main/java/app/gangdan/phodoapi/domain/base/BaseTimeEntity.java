@@ -1,24 +1,24 @@
-package app.gangdan.phodoapi.domain;
+package app.gangdan.phodoapi.domain.base;
 
 import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
 @Getter
-@EntityListeners(value = {AuditingEntityListener.class})
-public abstract class BaseEntity {
+@Setter
+public abstract class BaseTimeEntity {
 
     @CreatedDate
     private LocalDateTime createdDate;
 
     @LastModifiedDate
     private LocalDateTime modifiedDate;
-
 }

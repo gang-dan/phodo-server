@@ -41,3 +41,29 @@ springdoc:
     path: /swagger-ui.html
     disable-swagger-default-url: true
     display-query-params-without-oauth2: true
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: ["local"]
+
+swagger:
+  url: http://localhost:8080
+  desc: for local usages
+
+---
+
+
+spring:
+  config:
+    activate:
+      on-profile: ["real"]
+
+swagger:
+  url: http://phodo-env-1.eba-sirihwpg.ap-northeast-2.elasticbeanstalk.com:8080
+  desc: for real usages
+  documentation:
+    enabled: true

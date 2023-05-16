@@ -1,7 +1,7 @@
 package app.gangdan.phodoapi.domain.file.guide;
 
 import app.gangdan.phodoapi.domain.file.File;
-import app.gangdan.phodoapi.domain.photoguide.PhotoGuide;
+import app.gangdan.phodoapi.domain.photoGuide.PhotoGuide;
 import lombok.Getter;
 import lombok.ToString;
 

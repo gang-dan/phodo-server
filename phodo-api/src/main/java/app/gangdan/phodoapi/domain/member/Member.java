@@ -19,8 +19,13 @@ public class Member extends BaseEntity {
     @Column(nullable = false)
     private String username;
 
+    @Column(nullable = false)
+    private String email;
 
+    @Column(nullable = false)
+    private String profileImage;
 
-
+    @Column(nullable = false)
+    private String socialType;
 
 }

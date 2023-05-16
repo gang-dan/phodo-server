@@ -1,5 +1,6 @@
-package app.gangdan.phodoapi.domain.heart;
+package app.gangdan.phodoapi.domain.hashtag;
 
+import app.gangdan.phodoapi.domain.BaseEntity;
 import app.gangdan.phodoapi.domain.member.Member;
 import app.gangdan.phodoapi.domain.photoGuide.PhotoGuide;
 import lombok.AllArgsConstructor;
@@ -10,20 +11,18 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "heart")
+@Table(name = "hashtag")
 @Getter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Heart {
+public class Hashtag extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long heartId;
+    private Long hashtagId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
-    private Member member;      // TODO : 연관관계 점검
+    private String hashtagName;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "photo_guide_id")
