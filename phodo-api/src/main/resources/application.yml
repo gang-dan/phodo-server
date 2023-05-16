@@ -63,7 +63,7 @@ spring:
       on-profile: ["real"]
 
 swagger:
-  url: http://phodo-env-1.eba-sirihwpg.ap-northeast-2.elasticbeanstalk.com:8080
+  url: http://phodo-env-1.eba-sirihwpg.ap-northeast-2.elasticbeanstalk.com:80
   desc: for real usages
   documentation:
     enabled: true
