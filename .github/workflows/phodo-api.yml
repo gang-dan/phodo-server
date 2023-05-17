@@ -71,11 +71,11 @@ jobs:
         run: echo "CurrentTime=${{steps.current-time.outputs.formattedTime}}"
         shell: bash
 
-      - name: Generate deployment package
-        run: |
-          mkdir -p deploy/phodo-api
-          cp /home/runner/work/phodo-server/phodo-server/phodo-api/Dockerrun.aws.json deploy/Dockerrun.aws.json
-          cd deploy && zip -r deploy.zip .
+#      - name: Generate deployment package
+#        run: |
+#          mkdir -p deploy/phodo-api
+#          cp /home/runner/work/phodo-server/phodo-server/phodo-api/Dockerrun.aws.json deploy/Dockerrun.aws.json
+#          cd deploy && zip -r deploy.zip .
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v19
@@ -86,5 +86,5 @@ jobs:
           environment_name: Phodo-env-1
           version_label: github-action-${{steps.current-time.outputs.formattedTime}}
           region: ap-northeast-2
-          deployment_package: deploy/deploy.zip
+          deployment_package: /home/runner/work/phodo-server/phodo-server/phodo-api/Dockerrun.aws.json
           wait_for_deployment: false
