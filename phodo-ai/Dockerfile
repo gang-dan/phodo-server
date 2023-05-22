@@ -1,8 +1,8 @@
 FROM python:3.9
 
-WORKDIR /home/runner/work/phodo-server/phodo-server/phodo-ai
+RUN mkdir /app
 
-# COPY . /phodo-be/phodo-ai
+WORKDIR /app
 
 # RUN pip install -r requirements.txt
 
