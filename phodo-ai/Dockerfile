@@ -1,12 +1,8 @@
 FROM python:3.9
 
-WORKDIR /app
+WORKDIR /phodo-be/phodo-ai
 
-RUN mkdir -p /app
-
-WORKDIR /app
-
-COPY . /app
+# COPY . /phodo-be/phodo-ai
 
 # RUN pip install -r requirements.txt
 
