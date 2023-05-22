@@ -1,8 +1,8 @@
 FROM python:3.9
 
-COPY . /app
+COPY . /phodo_ai
 
-WORKDIR /app
+WORKDIR /phodo_ai
 
 # RUN pip install -r requirements.txt
 
