@@ -1,6 +1,6 @@
 FROM python:3.9
 
-WORKDIR /phodo-be/phodo-ai
+WORKDIR ./phodo-ai
 
 # COPY . /phodo-be/phodo-ai
 
